@@ -6,7 +6,7 @@ workers_dev = true
 
 [[kv_namespaces]]
 binding = "V2RAY"
-id = "0b28d5e78ba4429b8843a7f4dd6f212a"
+id = "d3e299aaf6624e76bc4f9bae9dee4377"
 
 
 
@@ -27,320 +27,47 @@ SUB_PAGE_URL = "https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/s
 LINK_PAGE_URL = "https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/link.html"
 
 [[routes]]
-pattern = "dng-google.xhamster.biz.id"
+pattern = "dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "ava.game.naver.com.dng-google.xhamster.biz.id"
+pattern = "ava.game.naver.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "graph.instagram.com.dng-google.xhamster.biz.id"
+pattern = "graph.instagram.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "quiz.int.vidio.com.dng-google.xhamster.biz.id"
+pattern = "quiz.int.vidio.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "live.iflix.com.dng-google.xhamster.biz.id"
+pattern = "live.iflix.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "support.zoom.us.dng-google.xhamster.biz.id"
+pattern = "support.zoom.us.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "blog.webex.com.dng-google.xhamster.biz.id"
+pattern = "blog.webex.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "investors.spotify.com.dng-google.xhamster.biz.id"
+pattern = "investors.spotify.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "cache.netflix.com.dng-google.xhamster.biz.id"
+pattern = "cache.netflix.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "zaintest.vuclip.com.dng-google.xhamster.biz.id"
+pattern = "zaintest.vuclip.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "ads.ruangguru.com.dng-google.xhamster.biz.id"
+pattern = "ads.ruangguru.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "io.ruangguru.com.dng-google.xhamster.biz.id"
+pattern = "io.ruangguru.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "api.midtrans.com.dng-google.xhamster.biz.id"
+pattern = "api.midtrans.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "investor.fb.com.dng-google.xhamster.biz.id"
+pattern = "investor.fb.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "bakrie.ac.id.dng-google.xhamster.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "ava.game.naver.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "graph.instagram.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "quiz.int.vidio.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "live.iflix.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "support.zoom.us.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "blog.webex.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "investors.spotify.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "cache.netflix.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "zaintest.vuclip.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "ads.ruangguru.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "io.ruangguru.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "api.midtrans.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "investor.fb.com.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "bakrie.ac.id.dng-google.turah.my.id"
-custom_domain = true
-[[routes]]
-pattern = "dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "ava.game.naver.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "graph.instagram.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "quiz.int.vidio.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "live.iflix.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "support.zoom.us.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "blog.webex.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "investors.spotify.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "cache.netflix.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "zaintest.vuclip.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "ads.ruangguru.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "io.ruangguru.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "api.midtrans.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "investor.fb.com.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "bakrie.ac.id.dng-google.ndeso.xyz"
-custom_domain = true
-[[routes]]
-pattern = "dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "ava.game.naver.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "graph.instagram.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "quiz.int.vidio.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "live.iflix.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "support.zoom.us.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "blog.webex.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "investors.spotify.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "cache.netflix.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "zaintest.vuclip.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "ads.ruangguru.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "io.ruangguru.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "api.midtrans.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "investor.fb.com.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "bakrie.ac.id.dng-google.ndeso.web.id"
-custom_domain = true
-[[routes]]
-pattern = "dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "ava.game.naver.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "graph.instagram.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "quiz.int.vidio.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "live.iflix.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "support.zoom.us.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "blog.webex.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "investors.spotify.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "cache.netflix.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "zaintest.vuclip.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "ads.ruangguru.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "io.ruangguru.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "api.midtrans.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "investor.fb.com.dng-google.najah.biz.id"
-custom_domain = true
-[[routes]]
-pattern = "bakrie.ac.id.dng-google.najah.biz.id"
-custom_domain = true
-
-[[routes]]
-pattern = "dng-google.bmkg.xyz"
-custom_domain = true
-
-[[routes]]
-pattern = "ava.game.naver.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "graph.instagram.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "quiz.int.vidio.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "live.iflix.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "support.zoom.us.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "blog.webex.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "investors.spotify.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "cache.netflix.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "zaintest.vuclip.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "ads.ruangguru.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "io.ruangguru.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "api.midtrans.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "investor.fb.com.dng-google.bmkg.xyz"
-custom_domain = true
-[[routes]]
-pattern = "bakrie.ac.id.dng-google.bmkg.xyz"
-custom_domain = true
-
-[[routes]]
-pattern = "dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "ava.game.naver.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "graph.instagram.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "quiz.int.vidio.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "live.iflix.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "support.zoom.us.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "blog.webex.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "investors.spotify.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "cache.netflix.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "zaintest.vuclip.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "ads.ruangguru.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "io.ruangguru.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "api.midtrans.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "investor.fb.com.dng-google.cloudproxyip.my.id"
-custom_domain = true
-[[routes]]
-pattern = "bakrie.ac.id.dng-google.cloudproxyip.my.id"
+pattern = "bakrie.ac.id.dns-google.c-bnn.xyz"
 custom_domain = true
