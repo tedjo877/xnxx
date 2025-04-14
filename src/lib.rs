@@ -40,7 +40,7 @@ async fn main(req: Request, env: Env, _: Context) -> Result<Response> {
         .on_async("/sub-api", sub)
         .on_async("/api-check", link)  // Changed to on_async
         .on_async("/:proxyip", tunnel)
-        .on_async("/Free-CF-Proxy/:proxyip", tunnel)
+        .on_async("/XN:proxyip", tunnel)
         .run(req, env)
         .await
 }
