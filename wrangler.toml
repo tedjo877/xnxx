@@ -1,0 +1,346 @@
+name = "v2ray"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-05-23"
+minify = true
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "V2RAY"
+id = "0b28d5e78ba4429b8843a7f4dd6f212a"
+
+
+
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[env.dev]
+build = { command = "cargo install -q worker-build && worker-build --dev" }
+
+
+[vars]
+#UUID = "0fbf4f81-2598-4b6a-a623-0ead4cb9efa8"
+UUID = "0fbf4f81-2598-4b6a-a623-0ead4cb9efa8"
+#, "aaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1", "00000000-0000-0000-0000-000000000000"]
+MAIN_PAGE_URL = "https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/index.html"
+SUB_PAGE_URL = "https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/sub.html"
+LINK_PAGE_URL = "https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/link.html"
+
+[[routes]]
+pattern = "privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "ava.game.naver.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "graph.instagram.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "quiz.int.vidio.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "live.iflix.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "support.zoom.us.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "blog.webex.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "investors.spotify.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "cache.netflix.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "zaintest.vuclip.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "ads.ruangguru.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "io.ruangguru.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "api.midtrans.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "investor.fb.com.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "bakrie.ac.id.privasi.xhamster.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "ava.game.naver.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "graph.instagram.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "quiz.int.vidio.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "live.iflix.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "support.zoom.us.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "blog.webex.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "investors.spotify.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "cache.netflix.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "zaintest.vuclip.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "ads.ruangguru.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "io.ruangguru.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "api.midtrans.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "investor.fb.com.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "bakrie.ac.id.privasi.turah.my.id"
+custom_domain = true
+[[routes]]
+pattern = "privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "ava.game.naver.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "graph.instagram.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "quiz.int.vidio.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "live.iflix.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "support.zoom.us.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "blog.webex.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "investors.spotify.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "cache.netflix.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "zaintest.vuclip.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "ads.ruangguru.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "io.ruangguru.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "api.midtrans.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "investor.fb.com.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "bakrie.ac.id.privasi.ndeso.xyz"
+custom_domain = true
+[[routes]]
+pattern = "privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "ava.game.naver.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "graph.instagram.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "quiz.int.vidio.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "live.iflix.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "support.zoom.us.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "blog.webex.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "investors.spotify.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "cache.netflix.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "zaintest.vuclip.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "ads.ruangguru.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "io.ruangguru.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "api.midtrans.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "investor.fb.com.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "bakrie.ac.id.privasi.ndeso.web.id"
+custom_domain = true
+[[routes]]
+pattern = "privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "ava.game.naver.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "graph.instagram.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "quiz.int.vidio.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "live.iflix.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "support.zoom.us.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "blog.webex.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "investors.spotify.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "cache.netflix.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "zaintest.vuclip.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "ads.ruangguru.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "io.ruangguru.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "api.midtrans.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "investor.fb.com.privasi.najah.biz.id"
+custom_domain = true
+[[routes]]
+pattern = "bakrie.ac.id.privasi.najah.biz.id"
+custom_domain = true
+
+[[routes]]
+pattern = "privasi.bmkg.xyz"
+custom_domain = true
+
+[[routes]]
+pattern = "ava.game.naver.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "graph.instagram.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "quiz.int.vidio.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "live.iflix.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "support.zoom.us.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "blog.webex.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "investors.spotify.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "cache.netflix.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "zaintest.vuclip.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "ads.ruangguru.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "io.ruangguru.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "api.midtrans.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "investor.fb.com.privasi.bmkg.xyz"
+custom_domain = true
+[[routes]]
+pattern = "bakrie.ac.id.privasi.bmkg.xyz"
+custom_domain = true
+
+[[routes]]
+pattern = "privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "ava.game.naver.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "graph.instagram.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "quiz.int.vidio.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "live.iflix.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "support.zoom.us.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "blog.webex.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "investors.spotify.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "cache.netflix.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "zaintest.vuclip.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "ads.ruangguru.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "io.ruangguru.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "api.midtrans.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "investor.fb.com.privasi.cloudproxyip.my.id"
+custom_domain = true
+[[routes]]
+pattern = "bakrie.ac.id.privasi.cloudproxyip.my.id"
+custom_domain = true

@@ -1,0 +1,44 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "debug",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-out",
+        "address": "https://8.8.8.8/dns-query"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "listen_port": 8080,
+      "type": "mixed",
+      "tag": "mixed-in",
+      "set_system_proxy": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vmess",
+      "tag": "proxy-b",
+      "server": "127.0.0.1",
+      "server_port": 8787,
+      "uuid": "0fbf4f81-2598-4b6a-a623-0ead4cb9efa8",
+      "security": "none",
+      "transport": {
+        "type": "ws",
+        "path": "/ID",
+        "headers": {
+          "Host": "127.0.0.1"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ]
+}
