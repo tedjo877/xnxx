@@ -144,8 +144,6 @@ async fn link(_: Request, cx: RouteContext<Config>) -> Result<Response> {
     get_response_from_url(cx.data.link_page_url.clone()).await
 }
 
-async fn tunnel(req: Request, mut cx: RouteContext<Config>) -> Result<Response> {
-    let mut proxyip = cx.param("proxyip").unwrap().to_string();
 
     if PROXYKV_PATTERN_2.is_match(&proxyip) || PROXYKV_PATTERN_5.is_match(&proxyip) {
         let kvid_list: Vec<String> = proxyip.split(',').map(|s| s.to_string()).collect();
