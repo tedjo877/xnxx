@@ -13,9 +13,6 @@ use worker::*;
 use once_cell::sync::Lazy;
 use regex::Regex;
 
-use std::collections::HashMap;
-use regex::Regex;
-use worker::*;
 
 static PROXYIP_PATTERN: Lazy<Regex> = Lazy::new(|| Regex::new(r"^.+-\d+$").unwrap());
 static PROXYKV_PATTERN_C1: Lazy<Regex> = Lazy::new(|| Regex::new(r"^([A-Z]{2})\d+$").unwrap());
