@@ -102,11 +102,13 @@ async fn tunnel(req: Request, mut cx: RouteContext<Config>) -> Result<Response> 
             .collect();
 
         if !filtered.is_empty() {
-            let rand_ip = &filtered[rand::random::<usize>() % filtered.len()];
-            proxyip = rand_ip.0.clone();
-            let proxy_port = rand_ip.1;
-            cx.data.proxy_addr = proxyip.clone();  // Menggunakan clone di sini
-            cx.data.proxy_port = proxy_port;
+    let rand_ip = &filtered[rand::random::<usize>() % filtered.len()];
+    proxyip = rand_ip.0.clone().replace(":", "-"); // penting!
+    let proxy_port = rand_ip.1;
+    cx.data.proxy_addr = proxyip.clone(); // ini nanti tetap pakai - dan diproses
+    cx.data.proxy_port = proxy_port;
+
+
         } else {
             return Err(Error::from("No matching proxy IP found"));
         }
