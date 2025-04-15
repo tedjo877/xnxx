@@ -13,19 +13,17 @@ use worker::*;
 use once_cell::sync::Lazy;
 use regex::Regex;
 
-use std::collections::HashMap;
-use regex::Regex;
-use worker::*;
-
 static PROXYIP_PATTERN: Lazy<Regex> = Lazy::new(|| Regex::new(r"^.+-\d+$").unwrap());
 static PROXYKV_PATTERN_C1: Lazy<Regex> = Lazy::new(|| Regex::new(r"^([A-Z]{2})\d+$").unwrap());
+static PROXYKV_PATTERN_2: Lazy<Regex> = Lazy::new(|| Regex::new(r"^[A-Z]{2}$").unwrap());
+static PROXYKV_PATTERN_5: Lazy<Regex> = Lazy::new(|| Regex::new(r"^[A-Z]{5}$").unwrap());
 
 async fn tunnel(req: Request, mut cx: RouteContext<Config>) -> Result<Response> {
     let mut proxyip = cx.param("proxyip").unwrap().to_string();
 
-    // Jika cocok dengan regex C1 (format seperti ID1, US20, dst)
+    // Cek apakah IP cocok dengan regex PROXYKV_PATTERN_C1
     if PROXYKV_PATTERN_C1.is_match(&proxyip) {
-        let country_code = proxyip.chars().take(2).collect::<String>();  // Ambil dua huruf pertama, misalnya "ID", "US", dsb.
+        let country_code = proxyip.chars().take(2).collect::<String>(); // Ambil dua huruf pertama untuk kode negara
         
         let txt_url = "https://cf.cloudproxyip.my.id/update_proxyip.txt";
         let req = Fetch::Url(Url::parse(txt_url)?);
@@ -65,12 +63,59 @@ async fn tunnel(req: Request, mut cx: RouteContext<Config>) -> Result<Response> 
         }
     }
 
-    // Jika cocok dengan regex PROXYIP_PATTERN
+    // Cek apakah IP cocok dengan regex PROXYIP_PATTERN
     if PROXYIP_PATTERN.is_match(&proxyip) {
         if let Some((addr, port_str)) = proxyip.split_once('-') {
             if let Ok(port) = port_str.parse() {
                 cx.data.proxy_addr = addr.to_string();
                 cx.data.proxy_port = port;
+            }
+        }
+    }
+
+    // Cek untuk pola PROXYKV_PATTERN_2 atau PROXYKV_PATTERN_5
+    if PROXYKV_PATTERN_2.is_match(&proxyip) || PROXYKV_PATTERN_5.is_match(&proxyip) {
+        let kvid_list: Vec<String> = proxyip.split(',').map(|s| s.to_string()).collect();
+        let kv = cx.kv("V2RAY")?;
+        let mut rand_buf = [0u8; 1];
+        getrandom::getrandom(&mut rand_buf).expect("failed generating random number");
+
+        // Tentukan URL dan key cache berdasarkan pattern
+        let (proxy_url, cache_key) = if PROXYKV_PATTERN_2.is_match(&proxyip) {
+            (
+                "https://cf.cloudproxyip.my.id/update_proxyip.json",
+                "proxy_kv_2",
+            )
+        } else {
+            (
+                "https://raw.githubusercontent.com/tedjo877/cek/refs/heads/main/ip.json",
+                "proxy_kv_5",
+            )
+        };
+
+        let mut proxy_kv_str = kv.get(cache_key).text().await?.unwrap_or_default();
+
+        if proxy_kv_str.is_empty() {
+            console_log!("getting proxy kv from github: {}", proxy_url);
+            let req = Fetch::Url(Url::parse(proxy_url)?);
+            let mut res = req.send().await?;
+            if res.status_code() == 200 {
+                proxy_kv_str = res.text().await?;
+                kv.put(cache_key, &proxy_kv_str)?.expiration_ttl(60 * 60 * 24).execute().await?;
+            } else {
+                return Err(Error::from(format!("error getting proxy kv: {}", res.status_code())));
+            }
+        }
+
+        let proxy_kv: HashMap<String, Vec<String>> = serde_json::from_str(&proxy_kv_str)?;
+
+        let kv_index = (rand_buf[0] as usize) % kvid_list.len();
+        proxyip = kvid_list[kv_index].clone();
+
+        if let Some(ips) = proxy_kv.get(&proxyip) {
+            if !ips.is_empty() {
+                let proxyip_index = (rand_buf[0] as usize) % ips.len();
+                proxyip = ips[proxyip_index].clone().replace(":", "-");
             }
         }
     }
@@ -88,14 +133,13 @@ async fn tunnel(req: Request, mut cx: RouteContext<Config>) -> Result<Response> 
             }
         });
 
+        // Jika koneksi adalah WebSocket
         Response::from_websocket(client)
     } else {
+        // Jika koneksi bukan WebSocket
         Response::from_html("hi from wasm!")
     }
 }
-
-static PROXYKV_PATTERN_2: Lazy<Regex> = Lazy::new(|| Regex::new(r"^[A-Z]{2}$").unwrap());
-static PROXYKV_PATTERN_5: Lazy<Regex> = Lazy::new(|| Regex::new(r"^[A-Z]{5}$").unwrap());
 
 #[event(fetch)]
 async fn main(req: Request, env: Env, _: Context) -> Result<Response> {
@@ -143,78 +187,3 @@ async fn sub(_: Request, cx: RouteContext<Config>) -> Result<Response> {
 async fn link(_: Request, cx: RouteContext<Config>) -> Result<Response> {
     get_response_from_url(cx.data.link_page_url.clone()).await
 }
-
-
-    if PROXYKV_PATTERN_2.is_match(&proxyip) || PROXYKV_PATTERN_5.is_match(&proxyip) {
-        let kvid_list: Vec<String> = proxyip.split(',').map(|s| s.to_string()).collect();
-        let kv = cx.kv("V2RAY")?;
-        let mut rand_buf = [0u8; 1];
-        getrandom::getrandom(&mut rand_buf).expect("failed generating random number");
-
-        // Tentukan URL dan key cache berdasarkan pattern
-        let (proxy_url, cache_key) = if PROXYKV_PATTERN_2.is_match(&proxyip) {
-            (
-                "https://cf.cloudproxyip.my.id/update_proxyip.json",
-                "proxy_kv_2",
-            )
-        } else {
-            (
-                "https://raw.githubusercontent.com/tedjo877/cek/refs/heads/main/ip.json",
-                "proxy_kv_5",
-            )
-        };
-
-        let mut proxy_kv_str = kv.get(cache_key).text().await?.unwrap_or_default();
-
-        if proxy_kv_str.is_empty() {
-            console_log!("getting proxy kv from github: {}", proxy_url);
-            let req = Fetch::Url(Url::parse(proxy_url)?);
-            let mut res = req.send().await?;
-            if res.status_code() == 200 {
-                proxy_kv_str = res.text().await?;
-                kv.put(cache_key, &proxy_kv_str)?.expiration_ttl(60 * 60 * 24).execute().await?;
-            } else {
-                return Err(Error::from(format!("error getting proxy kv: {}", res.status_code())));
-            }
-        }
-
-        let proxy_kv: HashMap<String, Vec<String>> = serde_json::from_str(&proxy_kv_str)?;
-
-        let kv_index = (rand_buf[0] as usize) % kvid_list.len();
-        proxyip = kvid_list[kv_index].clone();
-
-        if let Some(ips) = proxy_kv.get(&proxyip) {
-            if !ips.is_empty() {
-                let proxyip_index = (rand_buf[0] as usize) % ips.len();
-                proxyip = ips[proxyip_index].clone().replace(":", "-");
-            }
-        }
-    }
-
-    if PROXYIP_PATTERN.is_match(&proxyip) {
-        if let Some((addr, port_str)) = proxyip.split_once('-') {
-            if let Ok(port) = port_str.parse() {
-                cx.data.proxy_addr = addr.to_string();
-                cx.data.proxy_port = port;
-            }
-        }
-    }
-
-    let upgrade = req.headers().get("Upgrade")?.unwrap_or_default();
-if upgrade.to_lowercase() == "websocket" {
-    let WebSocketPair { server, client } = WebSocketPair::new()?;
-    server.accept()?;
-
-    wasm_bindgen_futures::spawn_local(async move {
-        let events = server.events().unwrap();
-        if let Err(e) = ProxyStream::new(cx.data, &server, events).process().await {
-            console_log!("[tunnel]: {}", e);
-        }
-    });
-
-    // Jika koneksi adalah WebSocket
-    Response::from_websocket(client)
-} else {
-    // Jika koneksi bukan WebSocket
-    Response::from_html("hi from wasm!")
-} // Pastikan blok ini ditutup dengan tanda kurung yang benar
