@@ -74,7 +74,7 @@ async fn tunnel(req: Request, mut cx: RouteContext<Config>) -> Result<Response> 
     if PROXYKV_PATTERN_C1.is_match(&proxyip) {
         let country_code = proxyip.chars().take(2).collect::<String>();  // Ambil dua huruf pertama, misalnya "ID", "US", dsb.
         
-        let txt_url = "https://cf.cloudproxyip.my.id/update_proxyip.txt";
+        let txt_url = "https://raw.githubusercontent.com/tedjo877/cek/main/update_proxyip.txt";
         let req = Fetch::Url(Url::parse(txt_url)?);
         let mut res = req.send().await?;
         if res.status_code() != 200 {
@@ -133,12 +133,12 @@ async fn tunnel(req: Request, mut cx: RouteContext<Config>) -> Result<Response> 
         // Tentukan URL dan key cache berdasarkan pattern
         let (proxy_url, cache_key) = if PROXYKV_PATTERN_2.is_match(&proxyip) {
             (
-                "https://cf.cloudproxyip.my.id/update_proxyip.json",
+                "https://raw.githubusercontent.com/tedjo877/cek/main/update_proxyip.json",
                 "proxy_kv_2",
             )
         } else {
             (
-                "https://raw.githubusercontent.com/tedjo877/cek/refs/heads/main/ip.json",
+                "https://raw.githubusercontent.com/tedjo877/cek/main/update_proxyip8.json",
                 "proxy_kv_5",
             )
         };
