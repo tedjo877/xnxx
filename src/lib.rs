@@ -201,19 +201,20 @@ async fn link(_: Request, cx: RouteContext<Config>) -> Result<Response> {
     }
 
     let upgrade = req.headers().get("Upgrade")?.unwrap_or_default();
-    if upgrade.to_lowercase() == "websocket" {
-        let WebSocketPair { server, client } = WebSocketPair::new()?;
-        server.accept()?;
+if upgrade.to_lowercase() == "websocket" {
+    let WebSocketPair { server, client } = WebSocketPair::new()?;
+    server.accept()?;
 
-        wasm_bindgen_futures::spawn_local(async move {
-            let events = server.events().unwrap();
-            if let Err(e) = ProxyStream::new(cx.data, &server, events).process().await {
-                console_log!("[tunnel]: {}", e);
-            }
-        });
+    wasm_bindgen_futures::spawn_local(async move {
+        let events = server.events().unwrap();
+        if let Err(e) = ProxyStream::new(cx.data, &server, events).process().await {
+            console_log!("[tunnel]: {}", e);
+        }
+    });
 
-        Response::from_websocket(client)
-    } else {
-        Response::from_html("hi from wasm!")
-    }
-}
+    // Jika koneksi adalah WebSocket
+    Response::from_websocket(client)
+} else {
+    // Jika koneksi bukan WebSocket
+    Response::from_html("hi from wasm!")
+} // Pastikan blok ini ditutup dengan tanda kurung yang benar
