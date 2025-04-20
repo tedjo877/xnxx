@@ -44,9 +44,9 @@ async fn main(req: Request, env: Env, _: Context) -> Result<Response> {
 
     Router::with_data(config)
         .on_async("/", fe)
-        .on_async("/sub-api", sub)
-        .on_async("/api-check", link)
-        .on_async("/:proxyip", tunnel)
+        .on_async("/api", sub)
+        .on_async("/proxy", link)
+        .on_async("/Free-CF-Proxy/:proxyip", tunnel)
         .run(req, env)
         .await
 }
