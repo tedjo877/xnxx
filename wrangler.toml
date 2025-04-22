@@ -117,5 +117,5 @@ custom_domain = true
 pattern = "investor.fb.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "ads.ruangguru.com.bmkg.xyz"
+pattern = "ads.ruangguru.dns-google.c-bnn.xyz"
 custom_domain = true
