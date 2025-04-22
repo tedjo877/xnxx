@@ -30,44 +30,92 @@ LINK_PAGE_URL = "https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/
 pattern = "dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "ava.game.naver.com.dns-google.c-bnn.xyz"
-custom_domain = true
-[[routes]]
-pattern = "graph.instagram.com.dns-google.c-bnn.xyz"
-custom_domain = true
-[[routes]]
-pattern = "quiz.int.vidio.com.dns-google.c-bnn.xyz"
-custom_domain = true
-[[routes]]
 pattern = "live.iflix.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
 pattern = "support.zoom.us.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
+pattern = "zoomcares.zoom.us.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "partner.zoom.us.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "zoomgov.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "gomarketplacecontent-cf.zoom.us.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "ava.game.naver.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
 pattern = "blog.webex.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "graph.instagram.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
 pattern = "investors.spotify.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "cache.netflix.com.dns-google.c-bnn.xyz"
+pattern = "investors.fb.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
 pattern = "zaintest.vuclip.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "ads.ruangguru.com.dns-google.c-bnn.xyz"
+pattern = "cache.netflix.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "quiz.vidio.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "quiz.staging.vidio.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "quiz.int.vidio.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "bimbel.ruangguru.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "edu.ruangguru.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
 pattern = "io.ruangguru.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
+pattern = "cf.shopee.co.id.sea-sw.swiftserve.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
 pattern = "api.midtrans.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "api.blibli.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "bakrie.ac.id.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "unnes.ac.id.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "fikom.esaunggul.ac.id.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "app.gopay.co.id.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "chat.sociomile.com.dns-google.c-bnn.xyz"
+custom_domain = true
+[[routes]]
+pattern = "api.quipper.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
 pattern = "investor.fb.com.dns-google.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "bakrie.ac.id.dns-google.c-bnn.xyz"
+pattern = "ads.ruangguru.com.bmkg.xyz"
 custom_domain = true
