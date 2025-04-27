@@ -1,6 +1,6 @@
 use super::ProxyStream;
-
 use tokio::io::AsyncReadExt;
+use crate::common::{parse_addr, parse_port};
 use worker::*;
 
 impl <'a> ProxyStream<'a> {
@@ -17,17 +17,11 @@ impl <'a> ProxyStream<'a> {
         let is_tcp = network_type == 1;
 
         // read port and address
-        let remote_addr = crate::common::parse_addr(self).await?;
-        let remote_port = {
-            let mut port = [0u8; 2];
-            self.read_exact(&mut port).await?;
-            ((port[0] as u16) << 8) | (port[1] as u16)
-        };
+        let remote_addr = parse_addr(self).await?;
+        let remote_port = parse_port(self).await?;
 
         // remove crlf
         self.read_u16().await?;
-
-        console_log!("connecting to upstream {}:{} [is_tcp={is_tcp}]", remote_addr, remote_port);
 
         if is_tcp {
             let addr_pool = [
