@@ -27,95 +27,95 @@ SUB_PAGE_URL = "https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/a
 LINK_PAGE_URL = "https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/proxy.html"
 
 [[routes]]
-pattern = "dns-google.c-bnn.xyz"
+pattern = "cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "live.iflix.com.dns-google.c-bnn.xyz"
+pattern = "live.iflix.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "support.zoom.us.dns-google.c-bnn.xyz"
+pattern = "support.zoom.us.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "zoomcares.zoom.us.dns-google.c-bnn.xyz"
+pattern = "zoomcares.zoom.us.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "partner.zoom.us.dns-google.c-bnn.xyz"
+pattern = "partner.zoom.us.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "zoomgov.com.dns-google.c-bnn.xyz"
+pattern = "zoomgov.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "gomarketplacecontent-cf.zoom.us.dns-google.c-bnn.xyz"
+pattern = "gomarketplacecontent-cf.zoom.us.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "ava.game.naver.com.dns-google.c-bnn.xyz"
+pattern = "ava.game.naver.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "blog.webex.com.dns-google.c-bnn.xyz"
+pattern = "blog.webex.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "graph.instagram.com.dns-google.c-bnn.xyz"
+pattern = "graph.instagram.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "investors.spotify.com.dns-google.c-bnn.xyz"
+pattern = "investors.spotify.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "investors.fb.com.dns-google.c-bnn.xyz"
+pattern = "investors.fb.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "zaintest.vuclip.com.dns-google.c-bnn.xyz"
+pattern = "zaintest.vuclip.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "cache.netflix.com.dns-google.c-bnn.xyz"
+pattern = "cache.netflix.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "quiz.vidio.com.dns-google.c-bnn.xyz"
+pattern = "quiz.vidio.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "quiz.staging.vidio.com.dns-google.c-bnn.xyz"
+pattern = "quiz.staging.vidio.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "quiz.int.vidio.com.dns-google.c-bnn.xyz"
+pattern = "quiz.int.vidio.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "bimbel.ruangguru.com.dns-google.c-bnn.xyz"
+pattern = "bimbel.ruangguru.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "edu.ruangguru.com.dns-google.c-bnn.xyz"
+pattern = "edu.ruangguru.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "io.ruangguru.com.dns-google.c-bnn.xyz"
+pattern = "io.ruangguru.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "cf.shopee.co.id.sea-sw.swiftserve.com.dns-google.c-bnn.xyz"
+pattern = "cf.shopee.co.id.sea-sw.swiftserve.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "api.midtrans.com.dns-google.c-bnn.xyz"
+pattern = "api.midtrans.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "api.blibli.com.dns-google.c-bnn.xyz"
+pattern = "api.blibli.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "bakrie.ac.id.dns-google.c-bnn.xyz"
+pattern = "bakrie.ac.id.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "unnes.ac.id.dns-google.c-bnn.xyz"
+pattern = "unnes.ac.id.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "fikom.esaunggul.ac.id.dns-google.c-bnn.xyz"
+pattern = "fikom.esaunggul.ac.id.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "app.gopay.co.id.dns-google.c-bnn.xyz"
+pattern = "app.gopay.co.id.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "chat.sociomile.com.dns-google.c-bnn.xyz"
+pattern = "chat.sociomile.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "api.quipper.com.dns-google.c-bnn.xyz"
+pattern = "api.quipper.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "investor.fb.com.dns-google.c-bnn.xyz"
+pattern = "investor.fb.com.cloudproxy.c-bnn.xyz"
 custom_domain = true
 [[routes]]
-pattern = "ads.ruangguru.dns-google.c-bnn.xyz"
+pattern = "ads.ruangguru.cloudproxy.c-bnn.xyz"
 custom_domain = true
